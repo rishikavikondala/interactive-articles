@@ -35,12 +35,18 @@ export const getArticle = async (articleId: string): Promise<Article | null> => 
 };
 
 export const updateArticle = async (articleId: string, article: Article) => {
-  const docRef = doc(firestore, articleCollectionName, articleId);
-  await updateDoc(docRef, {
+  const articleRef = doc(firestore, articleCollectionName, articleId);
+  await updateDoc(articleRef, {
     Block: article.Block,
     name: article.name,
   });
+
+  const articleIdRef = doc(firestore, articleIdsCollectionName, articleId);
+  await updateDoc(articleIdRef, {
+    name: article.name,
+  });
 };
+
 
 export const deleteArticle = async (id: string) => {
   await deleteDoc(doc(firestore, articleCollectionName, id));
