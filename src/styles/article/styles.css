@@ -1,0 +1,63 @@
+.article-container {
+  padding-top: 3.5rem;
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-title {
+  margin-left: 2.5rem;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+}
+
+.article-entry {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.0625rem solid lightgrey;
+  padding: 0.625rem 0;
+}
+
+.article-action-button {
+  margin-right: 0.625rem;
+}
+
+.block-viewer {
+  margin-bottom: 1.25rem;
+}
+
+.right-indent {
+  margin-right: 0.625rem;
+}
+
+.left-indent {
+  margin-left: 0.625rem;
+}
+
+.editor-buttons {
+  display: flex;
+  gap: 0.625rem;
+  margin-left: auto;
+  margin-right: 1.5625rem;
+}
+
+.new-article-button {
+  margin-right: 1.5625rem;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.text-warning {
+  display: flex;
+  align-items: center;
+  margin-right: 0.625rem;
+}
