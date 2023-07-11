@@ -6,6 +6,7 @@ const articleCollectionName = "articles";
 const articleIdsCollectionName = "articleIds";
 const defaultArticleName = "Untitled Article";
 
+// Using a separate firebase collection for storing id's and names so that we don't have to fetch each article in its entirety for the home page
 export const getArticleIds = async () => {
   const articleIdsSnapshot = await getDocs(collection(firestore, articleIdsCollectionName));
   return articleIdsSnapshot.docs.map(doc => ({ id: doc.id, name: doc.data().name as string }));
